@@ -19,10 +19,19 @@ function Node(number,steps) {
       fill(255);
     }
     textSize(20*scaleFactor);
-    //if(this.children.length == 0){
+
+    if(scaleFactor > 0.4){
       text(number, x,y)
       fill(255);
-    //}
+    }
+    else{
+      if(this.children.length == 0 || index == number){
+        text(number, x,y)
+        fill(255);
+      }
+    }
+
+   
   }
 
 }
